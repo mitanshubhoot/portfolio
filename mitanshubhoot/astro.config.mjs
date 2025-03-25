@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-  site: 'https://portfolio-adyb.onrender.com',
+  site: 'https://mitanshubhoot.onrender.com',
   integrations: [mdx(), sitemap(), tailwind()],
   markdown: {
     syntaxHighlight: 'shiki',
