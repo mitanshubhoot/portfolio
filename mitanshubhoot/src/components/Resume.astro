@@ -1,0 +1,25 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = HTMLAttributes<'a'>;
+
+const { href, class: className, ...props } = Astro.props;
+
+---
+
+<a href={href} class:list={[className]} {...props} target="_blank" rel="noopener noreferrer">
+	Resume
+</a>
+
+<style>
+a:before {
+	content: "./";
+	@apply -mr-2 text-accent-2;
+}
+a {
+	@apply text-accent mr-1;
+}
+a:hover {
+	text-decoration: underline;
+}
+</style>

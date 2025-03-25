@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Base.astro';
+import { WORK_EXPERIENCE } from 'src/consts';
+
+---
+
+<Layout
+	title="Work Experience"
+>
+	<h1 class="title">Work Experience 💻</h1>
+
+    <p class="mb-4 sm:mb-8">From classrooms to coding cubicles: Here's where all I've left my codeprint!</p>
+	
+        {WORK_EXPERIENCE.map(job => (
+            <p>
+            <ul class="space-y-4 sm:space-y-2" id={job.id.toString()}> 
+                <li> <h1 class="sub-title">{job.position} @ <u><a href={job.compnay_link} target="_blank" rel="noopener noreferrer" >{job.company}</a> </u></h1></li>
+                <u>Technologies:</u> {job.technologies}
+                {job.points.map(point => (
+                    <li>• {point}</li>
+                ))}
+            </ul> <br></br></p>
+        ))} 
+    </p>
+    
+</Layout>
+

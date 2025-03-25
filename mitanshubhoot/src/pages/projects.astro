@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Base.astro';
+import { PROJECTS } from 'src/consts';
+
+---
+
+<Layout
+	title="Projects"
+>
+	<h1 class="title"> Projects 💻</h1>
+
+    <p class="mb-4 sm:mb-8">Step into my laboratory of innovation, where comfort zones are merely starting points and each project is a bold leap into the unknown—here's to coding daringly and living on the edge of possibility!</p>
+	
+        {PROJECTS.map(project => (
+            <p>
+            <ul class="space-y-4 sm:space-y-2" id={project.id.toString()}> 
+                <h1 class="sub-title">
+                    {project.title} | 
+                    {project.keywords} 
+                    {project.github!=null? (
+                        <a href={project.github} target="_blank" rel="noopener noreferrer"> | <u>GitHub </u> </a>
+                    ):(
+                        <p></p>
+                    )}
+                    {project.manuscript!=null? (
+                        <a href={project.manuscript} target="_blank" rel="noopener noreferrer"> | <u>Manuscript</u></a>
+                    ):(
+                        <p></p>
+                    )}
+                </h1>
+
+                {project.points.map(point => (
+                    <li>• {point}</li>
+                ))}
+            </ul><br></br></p>
+        ))} 
+    </p>
+    
+</Layout>
+

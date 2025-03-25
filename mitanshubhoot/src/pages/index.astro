@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/Base.astro';
+import SocialMediaLinks from "@/components/SocialMediaLinks";
+import { WORK_EXPERIENCE, TECHNICAL_SKILLS } from 'src/consts';
+import { getFormattedDate } from 'src/utils/date';
+
+---
+
+<BaseLayout 
+	title="Home"
+	image='/demo.png'>
+	<section>
+		<h1 class="title">Hello World! I'm Mitanshu Bhoot 👋</h1>
+		
+		<p class="mb-4 sm:mb-8">
+			Let's `git commit` to some introductions!
+			<br><br>	
+			As a Backend & Cloud Engineer, I focus on building scalable systems that blend AI, distributed computing, and clean architecture. Whether it’s optimizing pipelines, integrating GenAI, or wrangling infra in the cloud, I enjoy turning complex problems into elegant solutions. Outside of code, I’m probably sketching out my next big idea—or debugging one I already shipped. Let’s build something impactful
+			</p>
+
+		<p class="mb-4 sm:mb-8">
+			Ps. No ChatGPT was harmed in the making whatsoever 😆
+		</p>
+
+		<div>
+			<span>You can find me on: </span>
+			<SocialMediaLinks/>
+		</div>
+	</section>
+
+	<section class="mt-16">
+		<h2 class="title">Work Experience</h2>
+		<!-- <ul class="space-y-4 sm:space-y-2">
+			{
+				WORK_EXPERIENCE.map(({ id, company, position, start, end }) => (
+					<li>
+						{/* • <p class="inline-block sm:mt-2"> {getFormattedDate(start)} - {getFormattedDate(end)}{position} @ <u><a href={"/work/#"+id.toString()}>{company}</a></u></p> */}
+						<div class="inline-block sm:mt-2">
+							<span>{getFormattedDate(start)} - {getFormattedDate(end)}</span>
+							<span> => </span>
+							<span>{position} @ </span>
+							<u><a href={"/work/#"+id.toString()}>{company}</a></u>
+						</div>
+					</li>
+				))
+			}
+		</ul> -->
+		
+		
+
+		<ol class="relative border-s timeline">                  
+			{
+				WORK_EXPERIENCE.map(({ id, company, position, start, end, isPresent }) => (
+					<li class="mb-10 ms-4">
+						<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+						<time class="mb-1 text-sm font-normal leading-none timeline-text">{getFormattedDate(start)} - {isPresent ? "Present" : getFormattedDate(end)}</time>
+						<h3 class="text-lg font-semibold timeline-tex">{position} @ <u><a href={"/work/#"+id.toString()}>{company}</a></u></h3>
+					</li>
+				))
+			}
+		</ol>
+	</section>
+
+	<section class="mt-16">
+			<h2 class="title">Technical Skills</h2>
+			<ul class="space-y-4 sm:space-y-2">
+				{
+					TECHNICAL_SKILLS.map(({ title, desc }) => (
+						<li>
+							<u>{title}:</u>
+							<p class="inline-block sm:mt-2">{desc}</p>
+						</li>
+					))
+				}
+			</ul>
+	</section>
+</BaseLayout>

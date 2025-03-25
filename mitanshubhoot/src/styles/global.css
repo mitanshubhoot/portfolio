@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    /* https://tailwindcss.com/docs/customizing-colors#using-css-variables */
+    --theme-bg: #efefef;
+    --theme-text: #222222;
+    --theme-accent: #dd7878;
+    --theme-accent-2: #bcc0cd;
+    --theme-surface: #e6e6e6;
+    --theme-quote: #dd7878;
+    --theme-highlight: #dd7878;
+  }
+
+  :root.dark {
+    color-scheme: dark;
+    --theme-bg: #1d1d1d;
+    --theme-text: #ededed;
+    --theme-accent: #93e1d4;
+    --theme-accent-2: #545454;
+    --theme-surface: #2f2f2f;
+    --theme-quote: #93e1d4;
+    --theme-highlight: #93e1d4;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  html body {
+    @apply mx-auto flex min-h-screen max-w-6xl flex-col px-4 pt-4 md:pt-8 font-mono text-sm font-normal antialiased bg-bgColor text-textColor;
+  } 
+
+  .tag {
+    @apply bg-accent px-1 py-0 text-bgColor font-semibold text-sm;
+  }
+
+  .tag:before {
+    content: "#";
+    @apply -mr-2;
+  }
+
+  .cody-link {
+    @apply bg-[size:100%_6px] bg-bottom bg-repeat-x w-fit;
+    background-image: linear-gradient(
+      transparent,
+      transparent 5px,
+      var(--theme-text) 5px,
+      var(--theme-text)
+    );
+  }
+
+  .cody-link:hover {
+    background-image: linear-gradient(
+      transparent,
+      transparent 4px,
+      var(--theme-accent) 4px,
+      var(--theme-accent)
+    );
+  }
+
+  .cody-bg {
+    @apply p-4 bg-surface;
+  }
+
+  .cody-copy-code {
+    @apply absolute top-2 right-2 bg-accent text-bgColor p-0.5 border border-accent hover:bg-bgColor hover:text-accent transition-all duration-200 text-sm;
+  }
+
+  .title:before {
+    content: "#";
+    @apply mr-2 text-accent-2;
+  }
+
+  .title {
+    @apply text-lg font-bold mb-4;
+  }
+
+  .sub-title {
+    @apply text-base font-bold mb-4 text-accent;
+  }
+
+  .inline-color {
+    @apply text-accent;
+  }
+
+  hr {
+    @apply border-accent border-dashed my-6;
+  }
+
+  ::selection {
+    @apply bg-highlight text-bgColor;
+  }
+
+  ::-moz-selection {
+    @apply bg-highlight text-bgColor;
+  }
+
+  .fade-in {
+    @apply transition-opacity duration-700 ease-in opacity-100 duration-700;
+  }
+  
+  .fade-out {
+    @apply transition-opacity duration-700 ease-in opacity-0 duration-700;
+  }
+
+  .timeline {
+    border-color: var(--theme-accent);
+  }
+
+  .timeline-text {
+    color: var(--theme-text);
+  }
+
+}
