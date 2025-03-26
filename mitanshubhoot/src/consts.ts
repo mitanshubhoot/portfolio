@@ -111,6 +111,21 @@ export const WORK_EXPERIENCE: Array<WorkExperience> = [
   },
   {
     id: 3,
+    position: "Data Science Intern -  Summer",
+    company: "Siemens Digital Industries",
+    start: new Date("2021-07-01"),
+    end: new Date("2021-08-30"),
+    points: [
+      "Transformed 1M+ raw data points into interactive Power BI dashboards",
+      "Delivered actionable insights and enhanced visibility into project KPIs",
+      "Accelerated decision-making, minimizing turnaround times, and improved team coordination across initiatives such as hackathons and cross-functional projects.",
+    ],
+    compnay_link: "https://www.sw.siemens.com/en-US/",
+    technologies: "Python, Power BI, SQL, DAX, Power Query (M)",
+    isPresent: false
+  },
+  {
+    id: 4,
     position: "Research Intern - GRM Program",
     company: "IBM",
     start: new Date("2020-10-01"),
