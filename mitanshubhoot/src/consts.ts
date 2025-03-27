@@ -150,16 +150,16 @@ export const TECHNICAL_SKILLS: Array<Skill> = [
   { title: "Other", desc: "Backend, Distributed Systems, Debugging, Agile, SDLC, Data Analysis, Data Visualization, AI Integration" }
 ];
 
-export const PROJECTS: Array<Project> = [
+export const PROJECTS = [
   {
     id: 1,
     title: "Serverless Video Conferencing",
-    keywords: "JavaScript, WebRTC, Node.js, WebSockets",
+    keywords: "JavaScript, WebRTC, Node.js, Express.js, WebSockets, HTML, CSS",
     github: "https://github.com/mitanshubhoot/WebRTC-Video-Conferencing",
-    manuscript: "https://webrtc-video-conferencing.onrender.com/",
+    manuscript: null,
     points: [
-      "Built peer-to-peer conferencing platform with WebRTC and WebSocket signaling server",
-      "Supported 10 clients in a scalable mesh architecture without centralized media relays"
+      "Developed a real-time, peer-to-peer video conferencing platform leveraging WebRTC for secure media streaming and Node.js-based WebSocket signaling servers for efficient peer connection management.",
+      "Implemented a scalable mesh architecture supporting up to 10 simultaneous clients without relying on centralized media relay servers, optimizing latency and resource efficiency."
     ]
   },
   {
@@ -169,8 +169,8 @@ export const PROJECTS: Array<Project> = [
     github: null,
     manuscript: null,
     points: [
-      "Built backend telemetry and autoscaling with real-time alerting and anomaly detection",
-      "Reduced downtime by 40%, MTTR by 60%, and cloud costs by 25%"
+      "Engineered comprehensive telemetry and autoscaling solutions integrated with Azure Monitor and Application Insights, featuring real-time anomaly detection, automated alerting, and dynamic scaling rules.",
+      "Significantly improved service reliability by reducing system downtime by 40%, mean-time-to-recovery (MTTR) by 60%, and optimizing cloud expenditures by 25%."
     ]
   },
   {
@@ -180,8 +180,8 @@ export const PROJECTS: Array<Project> = [
     github: "https://github.com/mitanshubhoot/MOS-Operating-System",
     manuscript: null,
     points: [
-      "Simulated round-robin scheduling, paging, and memory management",
-      "Handled 200+ concurrent requests with zero latency"
+      "Designed and implemented a multiprogramming operating system simulator featuring round-robin CPU scheduling, virtual memory management, paging techniques, and efficient process synchronization using POSIX Threads.",
+      "Demonstrated robust performance handling 200+ concurrent requests with negligible latency, highlighting efficient memory management and scheduling algorithms."
     ]
   },
   {
@@ -191,8 +191,41 @@ export const PROJECTS: Array<Project> = [
     github: "https://github.com/mitanshubhoot/Elderly-Fall-Detection",
     manuscript: null,
     points: [
-      "Built a real-time fall detection system using depth cameras and a CNN-LSTM deep learning pipeline for motion recognition", 
-      "Achieved a 30% improvement in detection accuracy over wearable sensors"
+      "Built a sophisticated, real-time elderly fall detection system using depth-sensing cameras integrated with a hybrid CNN-LSTM neural network pipeline for precise motion recognition.",
+      "Achieved a 30% improvement in detection accuracy compared to traditional wearable sensors, significantly enhancing user safety and emergency response effectiveness."
+    ]
+  },
+  {
+    id: 5,
+    title: "Human Anatomical Reference Model",
+    keywords: "Python, Open3D, Blender, Point-cloud Registration, Error Visualization, Machine Learning",
+    github: "https://github.com/mitanshubhoot/hra-amap-kidney-assessment",
+    manuscript: null,
+    points: [
+      "Developed a comprehensive 3D organ registration pipeline using the HRA-AMAP framework for precise alignment and error analysis of anatomical kidney models.",
+      "Implemented bidirectional projection techniques and advanced signed distance fields (SDF) for visualizing registration accuracy through detailed heatmaps and histograms, ensuring robust anatomical consistency and model evaluation."
+    ]
+  },
+  {
+    id: 6,
+    title: "Campus Navigation System",
+    keywords: "C++, A* Algorithm, Pathfinding, Grid-based Navigation",
+    github: "https://github.com/mitanshubhoot/campus_navigator",
+    manuscript: null,
+    points: [
+      "Designed a console-based navigation tool utilizing the A* pathfinding algorithm to compute optimal routes on a 40x40 campus grid with dynamic obstacles and predefined landmarks.",
+      "Provided an interactive, user-friendly grid visualization clearly marking shortest paths, landmarks, and obstacles to enhance navigational clarity and ease of use."
+    ]
+  },
+  {
+    id: 7,
+    title: "Applied Machine Learning Projects",
+    keywords: "Machine Learning, Deep Learning, Classification, Regression, Clustering, PCA, NLP",
+    github: "https://github.com/mitanshubhoot/Applied-Machine-Learning",
+    manuscript: null,
+    points: [
+      "Conducted extensive analyses across eight distinct machine learning projects, covering regression modeling for socioeconomic prediction, classification of geological samples, dimensionality reduction on imaging datasets, and evaluation of pretrained deep learning models.",
+      "Applied advanced methods including PCA, t-SNE, Procrustes analysis, and ensemble modeling to achieve comprehensive performance evaluation and interpretability in comparison with human benchmarks."
     ]
   }
 ];
