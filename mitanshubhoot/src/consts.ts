@@ -92,7 +92,7 @@ export const WORK_EXPERIENCE: Array<WorkExperience> = [
       "Future-proofed backend by migrating storage infrastructure and enabling RAG-based integrations"
     ],
     compnay_link: "https://www.veritas.com/",
-    technologies: "C#, .NET, Azure, Elasticsearch, Docker, SQL Server",
+    technologies: "C#, .NET, Azure, SQL Server, Azure Blob Storage, Windows, Linux, Git, Elasticsearch, Docker",
     isPresent: false
   },
   {
@@ -106,7 +106,7 @@ export const WORK_EXPERIENCE: Array<WorkExperience> = [
       "Reduced provisioning time from minutes to seconds, enabling rapid deployment cycles"
     ],
     compnay_link: "https://www.veritas.com/",
-    technologies: "Docker, VM Backup, Microservices",
+    technologies: "C#, .NET, Docker, Windows Containers, Microservices, Git",
     isPresent: false
   },
   {
@@ -133,10 +133,10 @@ export const WORK_EXPERIENCE: Array<WorkExperience> = [
     points: [
       "Designed privacy-preserving model training on encrypted genomic data using Fully Homomorphic Encryption (FHE)",
       "Implemented SIMD vectorized NN for encrypted gene score computation with 20x throughput",
-      "Integrated decrypted scores with clinical data for personalized treatment recommendations"
+      "Integrated decrypted scores with clinical data for personalized treatment recommendations (Publication: https://priorart.ip.com/IPCOM/00269757D)"
     ],
     compnay_link: "https://www.ibm.com/",
-    technologies: "FHE, SIMD, Neural Networks",
+    technologies: "Python, Boost Library (C++), IBM FHE Toolkit, SIMD, Depp Neural Networks",
     isPresent: false
   }
 ];
@@ -156,7 +156,7 @@ export const PROJECTS: Array<Project> = [
     title: "Serverless Video Conferencing",
     keywords: "JavaScript, WebRTC, Node.js, WebSockets",
     github: "https://github.com/mitanshubhoot/WebRTC-Video-Conferencing",
-    manuscript: null,
+    manuscript: "https://webrtc-video-conferencing.onrender.com/",
     points: [
       "Built peer-to-peer conferencing platform with WebRTC and WebSocket signaling server",
       "Supported 10 clients in a scalable mesh architecture without centralized media relays"
@@ -176,7 +176,7 @@ export const PROJECTS: Array<Project> = [
   {
     id: 3,
     title: "Multiprogramming Operating System (MOS)",
-    keywords: "C++, POSIX Threads, Linux",
+    keywords: "C++, POSIX Threads, Linux, GCC",
     github: "https://github.com/mitanshubhoot/MOS-Operating-System",
     manuscript: null,
     points: [
@@ -187,7 +187,7 @@ export const PROJECTS: Array<Project> = [
   {
     id: 4,
     title: "Elderly Fall Detection",
-    keywords: "Python, Numpy, Pandas, TensorFlow, OpenCV, Keras",
+    keywords: "Python, Numpy, Pandas, TensorFlow, OpenCV, Keras, DNN",
     github: "https://github.com/mitanshubhoot/Elderly-Fall-Detection",
     manuscript: null,
     points: [
