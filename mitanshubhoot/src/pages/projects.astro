@@ -17,13 +17,13 @@ import { PROJECTS } from 'src/consts';
                 <h1 class="sub-title">
                     {project.title} | 
                     {project.keywords} 
-                    {project.github!=null? (
-                        <a href={project.github} target="_blank" rel="noopener noreferrer"> | <u>GitHub </u> </a>
+		    {project.manuscript!=null? (
+                        <a href={project.manuscript} target="_blank" rel="noopener noreferrer"> | <u>Website </u></a>
                     ):(
                         <p></p>
                     )}
-                    {project.manuscript!=null? (
-                        <a href={project.manuscript} target="_blank" rel="noopener noreferrer"> | <u>Manuscript</u></a>
+                    {project.github!=null? (
+                        <a href={project.github} target="_blank" rel="noopener noreferrer"> | <u>GitHub </u> </a>
                     ):(
                         <p></p>
                     )}
