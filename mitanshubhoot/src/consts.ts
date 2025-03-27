@@ -74,7 +74,7 @@ export const NAV_LINKS: Array<{ title: string, path: string }> = [
   { title: "About", path: "/about" },
   { title: "Work Experience", path: "/work" },
   { title: "Projects", path: "/projects" },
-  { title: "Resume", path: "https://drive.google.com/drive/u/1/folders/1wLiACxXr3iy9yq1Cz69H-p7Rxl3pwItQ" }
+  { title: "Resume", path: "https://drive.google.com/file/d/15BshzsuR7fbbPJpB4xvsX3cNP-ady55f/view?usp=sharing" }
 ];
 
 export const WORK_EXPERIENCE: Array<WorkExperience> = [
@@ -118,7 +118,7 @@ export const WORK_EXPERIENCE: Array<WorkExperience> = [
     points: [
       "Transformed 1M+ raw data points into interactive Power BI dashboards",
       "Delivered actionable insights and enhanced visibility into project KPIs",
-      "Accelerated decision-making, minimizing turnaround times, and improved team coordination across initiatives such as hackathons and cross-functional projects.",
+      "Accelerated decision-making, minimizing turnaround times, and improved team coordination across initiatives such as hackathons and cross-functional projects",
     ],
     compnay_link: "https://www.sw.siemens.com/en-US/",
     technologies: "Python, Power BI, SQL, DAX, Power Query (M)",
@@ -155,7 +155,7 @@ export const PROJECTS: Array<Project> = [
     id: 1,
     title: "Serverless Video Conferencing",
     keywords: "JavaScript, WebRTC, Node.js, WebSockets",
-    github: null,
+    github: "https://github.com/mitanshubhoot/WebRTC-Video-Conferencing",
     manuscript: null,
     points: [
       "Built peer-to-peer conferencing platform with WebRTC and WebSocket signaling server",
@@ -177,11 +177,22 @@ export const PROJECTS: Array<Project> = [
     id: 3,
     title: "Multiprogramming Operating System (MOS)",
     keywords: "C++, POSIX Threads, Linux",
-    github: null,
+    github: "https://github.com/mitanshubhoot/MOS-Operating-System",
     manuscript: null,
     points: [
       "Simulated round-robin scheduling, paging, and memory management",
       "Handled 200+ concurrent requests with zero latency"
+    ]
+  },
+  {
+    id: 4,
+    title: "Elderly Fall Detection",
+    keywords: "Python, Numpy, Pandas, TensorFlow, OpenCV, Keras",
+    github: "https://github.com/mitanshubhoot/Elderly-Fall-Detection",
+    manuscript: null,
+    points: [
+      "Built a real-time fall detection system using depth cameras and a CNN-LSTM deep learning pipeline for motion recognition", 
+      "Achieved a 30% improvement in detection accuracy over wearable sensors"
     ]
   }
 ];
