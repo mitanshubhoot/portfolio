@@ -159,7 +159,7 @@ export const PROJECTS = [
     title: "Serverless Video Conferencing",
     keywords: "JavaScript, WebRTC, Node.js, Express.js, WebSockets, HTML, CSS",
     github: "https://github.com/mitanshubhoot/WebRTC-Video-Conferencing",
-    manuscript: null,
+    manuscript: "https://webrtc-video-conferencing.onrender.com/",
     points: [
       "Developed a real-time, peer-to-peer video conferencing platform leveraging WebRTC for secure media streaming and Node.js-based WebSocket signaling servers for efficient peer connection management.",
       "Implemented a scalable mesh architecture supporting up to 10 simultaneous clients without relying on centralized media relay servers, optimizing latency and resource efficiency."
@@ -225,7 +225,7 @@ export const PROJECTS = [
     title: "Applied Machine Learning Projects",
     keywords: "Machine Learning, Deep Learning, Classification, Regression, Clustering, PCA, NLP",
     github: "https://github.com/mitanshubhoot/Applied-Machine-Learning",
-    manuscript: "https://github.com/mitanshubhoot/Applied-Machine-Learning",
+    manuscript: null,
     points: [
       "Conducted extensive analyses across eight distinct machine learning projects, covering regression modeling for socioeconomic prediction, classification of geological samples, dimensionality reduction on imaging datasets, and evaluation of pretrained deep learning models.",
       "Applied advanced methods including PCA, t-SNE, Procrustes analysis, and ensemble modeling to achieve comprehensive performance evaluation and interpretability in comparison with human benchmarks."
