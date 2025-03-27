@@ -74,7 +74,7 @@ export const NAV_LINKS: Array<{ title: string, path: string }> = [
   { title: "About", path: "/about" },
   { title: "Work Experience", path: "/work" },
   { title: "Projects", path: "/projects" },
-  { title: "Resume", path: "https://drive.google.com/file/d/15BshzsuR7fbbPJpB4xvsX3cNP-ady55f/view?usp=sharing" }
+  { title: "Resume", path: "https://drive.google.com/file/d/1_966MAUUmsI63OFIphjyLxlA6-JdOxNb/view?usp=sharing" }
 ];
 
 export const WORK_EXPERIENCE: Array<WorkExperience> = [
