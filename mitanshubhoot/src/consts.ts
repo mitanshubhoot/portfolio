@@ -89,7 +89,9 @@ export const WORK_EXPERIENCE: Array<WorkExperience> = [
       "Achieved 98% reduction in critical vulnerabilities through containerized open-source solutions",
       "Engineered a C#/.NET workload to migrate email formats to the cloud and archive in Azure Blob Storage",
       "Led Elasticsearch-based search system with optimized indexing pipeline, boosting speed by 70%",
-      "Future-proofed backend by migrating storage infrastructure and enabling RAG-based integrations"
+      "Future-proofed backend by migrating storage infrastructure and enabling RAG-based integrations",
+      "Achievement: Veritas Award for Excellent Performance(Q3 2023)",
+      "Achievement: Winner Veritas Catalyst Hackathon 2022 (90+ teams)"
     ],
     compnay_link: "https://www.veritas.com/",
     technologies: "C#, .NET, Azure, SQL Server, Azure Blob Storage, Windows, Linux, Git, Elasticsearch, Docker",
@@ -133,7 +135,8 @@ export const WORK_EXPERIENCE: Array<WorkExperience> = [
     points: [
       "Designed privacy-preserving model training on encrypted genomic data using Fully Homomorphic Encryption (FHE)",
       "Implemented SIMD vectorized NN for encrypted gene score computation with 20x throughput",
-      "Integrated decrypted scores with clinical data for personalized treatment recommendations (Publication: https://priorart.ip.com/IPCOM/00269757D)"
+      "Integrated decrypted scores with clinical data for personalized treatment recommendations",
+      "Publication: https://priorart.ip.com/IPCOM/00269757D)"
     ],
     compnay_link: "https://www.ibm.com/",
     technologies: "Python, Boost Library (C++), IBM FHE Toolkit, SIMD, Depp Neural Networks",
