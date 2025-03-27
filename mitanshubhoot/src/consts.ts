@@ -136,7 +136,7 @@ export const WORK_EXPERIENCE: Array<WorkExperience> = [
       "Designed privacy-preserving model training on encrypted genomic data using Fully Homomorphic Encryption (FHE)",
       "Implemented SIMD vectorized NN for encrypted gene score computation with 20x throughput",
       "Integrated decrypted scores with clinical data for personalized treatment recommendations",
-      "Publication: https://priorart.ip.com/IPCOM/00269757D)"
+      "Publication: https://priorart.ip.com/IPCOM/00269757D"
     ],
     compnay_link: "https://www.ibm.com/",
     technologies: "Python, Boost Library (C++), IBM FHE Toolkit, SIMD, Depp Neural Networks",
