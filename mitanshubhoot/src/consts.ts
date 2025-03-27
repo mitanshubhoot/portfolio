@@ -225,7 +225,7 @@ export const PROJECTS = [
     title: "Applied Machine Learning Projects",
     keywords: "Machine Learning, Deep Learning, Classification, Regression, Clustering, PCA, NLP",
     github: "https://github.com/mitanshubhoot/Applied-Machine-Learning",
-    manuscript: null,
+    manuscript: "https://github.com/mitanshubhoot/Applied-Machine-Learning",
     points: [
       "Conducted extensive analyses across eight distinct machine learning projects, covering regression modeling for socioeconomic prediction, classification of geological samples, dimensionality reduction on imaging datasets, and evaluation of pretrained deep learning models.",
       "Applied advanced methods including PCA, t-SNE, Procrustes analysis, and ensemble modeling to achieve comprehensive performance evaluation and interpretability in comparison with human benchmarks."
