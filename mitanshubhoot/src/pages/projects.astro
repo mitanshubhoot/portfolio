@@ -2,6 +2,9 @@
 import Layout from '../layouts/Base.astro';
 import { PROJECTS } from 'src/consts';
 
+// Get unique categories
+const categories = ['All', ...new Set(PROJECTS.map(project => project.category))];
+
 ---
 
 <Layout
@@ -11,31 +14,135 @@ import { PROJECTS } from 'src/consts';
 
     <p class="mb-4 sm:mb-8">Step into my laboratory of innovation, where comfort zones are merely starting points and each project is a bold leap into the unknown—here's to coding daringly and living on the edge of possibility!</p>
 	
+    <!-- Filter Tabs -->
+    <div class="mb-8">
+        <div class="flex flex-wrap gap-2 mb-4">
+            {categories.map(category => (
+                <button 
+                    class={`filter-btn px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                        category === 'All' ? 'filter-btn-active' : 'filter-btn-inactive'
+                    }`}
+                    data-category={category}
+                >
+                    {category} 
+                    {category !== 'All' && (
+                        <span class="ml-1 text-xs opacity-75">
+                            ({PROJECTS.filter(p => p.category === category).length})
+                        </span>
+                    )}
+                </button>
+            ))}
+        </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div id="projects-container">
         {PROJECTS.map(project => (
-            <p>
-            <ul class="space-y-4 sm:space-y-2" id={project.id.toString()}> 
-                <h1 class="sub-title">
-                    {project.title} | 
-                    {project.keywords} 
-                    {project.github!=null? (
-                        <a href={project.github} target="_blank" rel="noopener noreferrer"> | <u>GitHub </u> </a>
-                    ):(
-                        <p></p>
-                    )}
-		    {project.manuscript!=null? (
-                        <a href={project.manuscript} target="_blank" rel="noopener noreferrer"> | <u>Website </u></a>
-                    ):(
-                        <p></p>
-                    )}
+            <div class="project-card mb-6" data-category={project.category}>
+                <ul class="space-y-4 sm:space-y-2" id={project.id.toString()}> 
+                    <h1 class="sub-title">
+                        <span class="category-badge">{project.category}</span>
+                        {project.title} | 
+                        {project.keywords} 
+                        {project.github!=null? (
+                            <a href={project.github} target="_blank" rel="noopener noreferrer"> | <u>GitHub </u> </a>
+                        ):(
+                            <p></p>
+                        )}
+                        {project.manuscript!=null? (
+                            <a href={project.manuscript} target="_blank" rel="noopener noreferrer"> | <u>Website </u></a>
+                        ):(
+                            <p></p>
+                        )}
+                    </h1>
 
-                </h1>
-
-                {project.points.map(point => (
-                    <li>• {point}</li>
-                ))}
-            </ul><br></br></p>
+                    {project.points.map(point => (
+                        <li>• {point}</li>
+                    ))}
+                </ul>
+            </div>
         ))} 
-    </p>
+    </div>
     
 </Layout>
 
+<style>
+    .filter-btn {
+        border: 2px solid var(--theme-accent);
+        background: transparent;
+        color: var(--theme-accent);
+        cursor: pointer;
+    }
+    
+    .filter-btn:hover {
+        background: var(--theme-accent);
+        color: var(--theme-bg);
+    }
+    
+    .filter-btn-active {
+        background: var(--theme-accent);
+        color: var(--theme-bg);
+    }
+    
+    .filter-btn-inactive {
+        background: transparent;
+        color: var(--theme-accent);
+    }
+    
+    .category-badge {
+        display: inline-block;
+        padding: 2px 8px;
+        background: var(--theme-accent);
+        color: var(--theme-bg);
+        border-radius: 12px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-right: 8px;
+    }
+    
+    .project-card {
+        transition: all 0.3s ease;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .project-card.hidden {
+        opacity: 0;
+        transform: translateY(-10px);
+        height: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
+                
+                // Update active button
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('filter-btn-active');
+                    btn.classList.add('filter-btn-inactive');
+                });
+                this.classList.remove('filter-btn-inactive');
+                this.classList.add('filter-btn-active');
+                
+                // Filter projects
+                projectCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    
+                    if (category === 'All' || cardCategory === category) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    });
+</script>
