@@ -81,37 +81,35 @@ export const NAV_LINKS: Array<{ title: string, path: string }> = [
 export const WORK_EXPERIENCE: Array<WorkExperience> = [
   {
     id: 1,
-    position: "Software Development Intern",
+    position: "Software Engineering Co-op",
     company: "DSALTA Inc.",
     start: new Date("2025-06-01"),
-    end: new Date(),
+    end: new Date("2025-12-01"),
     points: [
-      "Developing AI-first vendor risk management solutions with robust backend APIs and microservices architecture",
-      "Building automated compliance and trust management workflows using Python, Node.js, and modern web technologies",
-      "Contributing to real-time monitoring systems and backend services for third-party risk assessment",
-      "Designing and implementing scalable backend systems for vendor onboarding and audit automation processes"
+      "Designed enterprise compliance automation platform with Node.js/TypeScript & Python microservices on AWS EKS, integrating 100+ SaaS providers, scaling from single to 1,000+ concurrent evaluations with 50,000+ checks daily.",
+      "Implemented distributed vendor risk assessment engine processing 10,000+ security checks per vendor daily using Kafka (AWS MSK), SQS with multithreaded consumer groups, for real-time threat scoring & automated remediation at scale.",
+      "Architected RAG-powered compliance intelligence system with LangGraph and vector search to automate policy report analysis and evidence evaluation, accelerating audit cycles from 60 days to 7 days and reducing manual review workload by 85%.",
+      "Built distributed async job orchestration system using AWS Lambda for serverless execution, PostgreSQL for job state persistence, and Redis for distributed locking and caching, coordinating 200+ parallel compliance checks per vendor."
     ],
     compnay_link: "https://www.dsalta.com/",
-    technologies: "Python, JavaScript, TypeScript, React, Next.js, Node.js, Docker, Kubernetes, Kafka, Redis, AI/ML, Cloud Technologies, APIs",
-    isPresent: true
+    technologies: "Python, Node.js, TypeScript, AWS EKS, Kafka, AWS MSK, SQS, Kubernetes, LangGraph, PostgreSQL, Redis, AWS Lambda",
+    isPresent: false
   },
   {
     id: 2,
-    position: "Associate Software Developer",
+    position: "Software Engineer",
     company: "Veritas Technologies LLC",
-    start: new Date("2022-08-01"),
-    end: new Date("2024-08-01"),
+    start: new Date("2022-01-01"),
+    end: new Date("2024-07-01"),
     points: [
-      "Delivered secure data backup and recovery solutions for SaaS platforms, resolving customer backlog by 80%",
-      "Achieved 98% reduction in critical vulnerabilities through containerized open-source solutions",
-      "Engineered a C#/.NET workload to migrate email formats to the cloud and archive in Azure Blob Storage",
-      "Led Elasticsearch-based search system with optimized indexing pipeline, boosting speed by 70%",
-      "Future-proofed backend by migrating storage infrastructure and enabling RAG-based integrations",
-      "Achievement: Veritas Award for Excellent Performance(Q3 2023)",
-      "Achievement: Winner Veritas Catalyst Hackathon 2022 (90+ teams)"
+      "Built high-throughput data ingestion pipelines for enterprise backup platform, processing 10M+ writes/day across billions of customer backup objects with built-in retry mechanisms, deduplication checks, and failure recovery.",
+      "Developed API integration layers using Python async/await and Node.js with Redis on ElastiCache and worker queues on AWS ECS, connecting to 10+ SaaS platforms, handling pagination, rate limiting, and schema changes to reliably sync customer data at scale.",
+      "Debugged and resolved critical production issues including PostgreSQL deadlocks, memory leaks and indexing failures across distributed services, reducing P0/P1 incidents by 80% and improving MTTR from 4 hours to under 90 minutes.",
+      "Implemented Elasticsearch-based search infrastructure with multi-node clustering and bulk indexing optimizations, enabling search and restore throughput of 50K+ documents/sec during disaster recovery.",
+      "Led containerization of 12 legacy services to AWS EKS (Kubernetes), building Jenkins CI/CD pipelines with automated security scanning and blue-green deployments, reducing deployment time from 3 hours to 15 mins and eliminating 98% of critical vulnerabilities."
     ],
     compnay_link: "https://www.veritas.com/",
-    technologies: "C#, .NET, Azure, SQL Server, Azure Blob Storage, Windows, Linux, Git, Elasticsearch, Docker",
+    technologies: "Python, Node.js, TypeScript, AWS, PostgreSQL, Elasticsearch, Docker, Kubernetes, Redis, AWS ECS, AWS EKS, Jenkins",
     isPresent: false
   },
   {
@@ -130,47 +128,56 @@ export const WORK_EXPERIENCE: Array<WorkExperience> = [
   },
   {
     id: 4,
-    position: "Data Science Intern -  Summer",
+    position: "Software Developer Intern",
     company: "Siemens Digital Industries",
-    start: new Date("2021-08-01"),
-    end: new Date("2021-08-30"),
+    start: new Date("2021-06-01"),
+    end: new Date("2021-08-31"),
     points: [
-      "Transformed 1M+ raw data points into interactive Power BI dashboards",
-      "Delivered actionable insights and enhanced visibility into project KPIs",
-      "Accelerated decision-making, minimizing turnaround times, and improved team coordination across initiatives such as hackathons and cross-functional projects",
+      "Created ETL pipelines for 1M+ manufacturing records, automating data collection from 15+ legacy systems into centralized data warehouse.",
+      "Optimized SQL queries and database indexes, reducing report generation time from 4 minutes to under 2 minutes for 200+ operators."
     ],
     compnay_link: "https://www.sw.siemens.com/en-US/",
-    technologies: "Python, Power BI, SQL, DAX, Power Query (M)",
+    technologies: "Python, SQL, Data Engineering, ETL",
     isPresent: false
   },
   {
     id: 5,
-    position: "Research Intern - GRM Program",
+    position: "Software Developer Intern",
     company: "IBM",
-    start: new Date("2020-11-01"),
-    end: new Date("2021-05-01"),
+    start: new Date("2020-10-01"),
+    end: new Date("2021-04-01"),
     points: [
-      "Designed privacy-preserving model training on encrypted genomic data using Fully Homomorphic Encryption (FHE)",
-      "Implemented SIMD vectorized NN for encrypted gene score computation with 20x throughput",
-      "Integrated decrypted scores with clinical data for personalized treatment recommendations",
-      "Publication: https://priorart.ip.com/IPCOM/00269757D"
+      "Devised privacy-preserving ML system using Fully Homomorphic Encryption in C++, enabling model training on encrypted medical data.",
+      "Optimized cryptographic operations with SIMD vectorization, reducing real-time encrypted inference time from 50ms to 2.5ms."
     ],
     compnay_link: "https://www.ibm.com/",
-    technologies: "Python, Boost Library (C++), IBM FHE Toolkit, SIMD, Depp Neural Networks",
+    technologies: "C++, Python, Machine Learning, Docker",
     isPresent: false
   }
 ];
 
 export const TECHNICAL_SKILLS: Array<Skill> = [
-  { title: "Languages/Frameworks", desc: "C/C++, Python, C#, Go, JavaScript, TypeScript, Java, Bash, .NET Core, Node.js, Express.js, React, Next.js, Django, Flask, LangChain, GraphQL, gRPC" },
+  { title: "Languages/Frameworks", desc: "Python, C/C++, C#, Go, JavaScript, TypeScript, Bash, .NET Core, FastAPI, Node.js, Express.js, React, Next.js, Django, Flask, LangChain, LangGraph, GraphQL, gRPC, REST APIs" },
   { title: "Database", desc: "PostgreSQL, MySQL, SQLite, MongoDB, Cassandra, Redis, DynamoDB, Amazon RDS, Elasticsearch" },
   { title: "Tools & Libraries", desc: "Git, GitHub, Linux, Visual Studio, Postman, Swagger, Power BI, Tableau, Selenium, Jira, WebSockets, Protocol Buffers, Terraform, Ansible, Jenkins" },
-  { title: "Cloud & DevOps", desc: "Azure, AWS (EC2, S3, ECR, ECS, RDS, Lambda, CloudWatch, Glue), GitHub Actions, Docker, Kubernetes, Kafka" },
-  { title: "AI & ML", desc: "PyTorch, TensorFlow, Scikit, Pandas, NumPy, Matplotlib, Hugging Face, Transformers, LLM, NLP, CV, Gen AI, Spark" },
-  { title: "Other", desc: "Backend, Distributed Systems, Microservices, Real-time Systems, Debugging, Agile, SDLC, Data Analysis, Data Visualization, AI Integration" }
+  { title: "Cloud & DevOps", desc: "Azure, AWS (EC2, S3, ECR, ECS, EKS, RDS, Lambda, SQS, CloudFormation, CloudWatch, Glue), GitHub Actions, CI/CD, Docker, Kubernetes, Kafka" },
+  { title: "AI & ML", desc: "PyTorch, TensorFlow, LangChain, LangGraph, OpenAI API, FAISS, Pinecone, GenAI, Scikit, Pandas, NumPy, Matplotlib, Hugging Face, Transformers, LLM, NLP, CV, Spark" },
+  { title: "Other", desc: "Backend, Distributed Systems, Microservices, Event-Driven Architecture, Async Processing, Message Queues, System Design, Concurrency, Real-time Systems, Debugging, Agile, SDLC, Data Analysis, AI Integration" }
 ];
 
 export const PROJECTS = [
+  {
+    id: 0,
+    title: "AI Safety Middleware",
+    keywords: "Python, FastAPI, PostgreSQL, Redis, gRPC, Docker",
+    github: "https://github.com/mitanshubhoot/ai-safety-middleware",
+    manuscript: null,
+    points: [
+      "Designed AI-safety prompt firewall intercepting 100% LLM prompts with <1ms latency using FastAPI, PostgreSQL, Redis, gRPC, Docker.",
+      "Integrated regex filters, RAG-powered semantic checks detecting 98% of sensitive inputs (API keys, PII, secrets), reducing data-leak incidents."
+    ],
+    category: "AI/ML"
+  },
   {
     id: 1,
     title: "Real-Time Document Collaboration Platform",
